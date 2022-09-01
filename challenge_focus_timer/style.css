@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  padding: 19rem 2rem;
+}
+
+main {
+  max-width: 82.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+
+@media (max-width: 700px){
+  body {
+    padding: 4rem 0rem;
+  }
+
+  main {
+    display: grid;
+    justify-content: center;
+  }
+
+  #timer {
+    margin-bottom: 6rem;
+  }
+
+  .time {
+    justify-content: center;
+  }
+
+  .controls button {
+   scale: 1.2;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+#timer {
+  text-align: center;
+  align-self: center;
+}
+
+.time {
+  font-size: clamp(4rem, 4rem + 10vw, 12.6rem);
+  line-height: 14.8rem;
+  text-align: center;
+  color: #323238;
+  display: flex;
+  margin-bottom: 4.8rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  transition: transform .3s;
+}
+
+.controls button:hover {
+  transform: scale(0.9);
+}
+
+#cards {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-areas: "A B"
+  "C D";
+}
+
+.forest-card{
+  grid-area: A;
+}
+.rain-card {
+  grid-area: B;
+}
+.coffee-card {
+  grid-area: C;
+}
+.fireplace-card {
+  grid-area: D;
+}
+
+#cards button {
+  width: 13.8rem;
+  height: 15.2rem;
+  border: none;
+  border-radius: 2.4rem;
+  background: #E1E1E6;
+  transition: transform .3s;
+}
+
+#cards button:hover {
+  transform: scale(0.9);
+}
+
+#slider {
+ margin-top: 4rem;
+ width: 70%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 7px;
+  border-radius: 5px;
+  background-image: linear-gradient(#1d1a19, #c1bab8);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #d5d3de;
+  cursor: default;
+  box-shadow: 0px 0px 8px 0px rgb(49, 48, 48);
+}
+
+
+/*Button Colors*/
+
+#cards #card1.color {
+  background-image:linear-gradient(rgb(87, 188, 87), rgb(4, 41, 4));
+}
+
+#cards #card2.color {
+  background-image:linear-gradient(rgb(107, 192, 228), rgb(6, 46, 63));
+}
+
+#cards #card3.color {
+  background-image:linear-gradient(rgb(215, 126, 215), rgb(59, 24, 59));
+}
+
+#cards #card4.color {
+background-image:linear-gradient(rgb(248, 109, 85), rgb(80, 20, 9));
+}
+
+
+
+
